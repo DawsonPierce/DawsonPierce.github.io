@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    font-family: "Oxanium", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+}
+/*Default size: Laptop/Desktop screen*/
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2.5em;
+    padding-bottom: 0.5em;
+    padding-top: 1.5em;
+    border-bottom: 5px solid black;
+    background-color: seashell;
+}
+footer {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 25em;
+    justify-content: center;
+    gap: 3%;
+    border-top: 2px solid black;
+    background-color: seashell;
+    padding-block-end: auto;
+    div{
+        display: flex;
+        justify-content: center;
+    }
+    h3{
+        font-size: 1.7em;
+    }
+    a{
+        font-size: 1.3em;
+    }
+}
+nav a{
+    color: black;
+    padding: 0.5%;
+    border: 1mm solid black;
+    background-color: white;
+    margin: 1% 0.5%;
+}
+nav a:hover{
+    background-color: lightskyblue;
+    padding: 1%;
+    margin: 0;
+}
+.outer-page{
+    background-color: grey;
+    padding: 3%;
+}
+.main-page, .works, .experience{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    border: 2px solid black;
+    padding: 2em;
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 4em;
+        grid-column: 1 / span 2;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p{
+        font-size: large;
+    }
+    ul{
+        font-size: large;
+    }
+}
+.blog-head{
+    margin: 2em 40%;
+    border: 2px solid black;
+    background-color: white;
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: 4em;
+    }
+}
+.blog{
+    display: grid;
+    margin: 3em;
+    border: 2px solid black;
+    padding: 2em;
+    background-color: white;
+    h2{
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
+    }
+    p{
+        font-size: large;
+    }
+    ul{
+        font-size: large;
+    }
+}
+.image {
+    display: flex;
+    align-content: center;
+}
+/*IDs can only be set once, so this is needed 
+to allow changes on smaller screen sizes.*/
+@media screen and (min-width: 800px) {
+    #left-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-right: 40%;
+        gap: 5%;
+    }
+    #right-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding-left: 40%;
+        gap: 5%;
+    }
+    #grid-3{
+    grid-row: 3 / 3;
+    grid-column: 2 / 3;
+    }
+    #grid-5{
+    grid-row: 4 / 4;
+    grid-column: 1 / 1;
+    }
+}
+/*Tablet screens*/
+@media screen and (min-width: 600px) and (max-width: 799px) {
+    header nav{
+        margin-top: 0;
+        padding: .2em;
+        padding-top: 1em;
+        a{
+            font-size: .75em;
+        }
+    }
+    .main-page, .works, .experience{
+        margin: 2em;
+        h1{
+            font-size: 3em;
+        }
+        h2{
+            font-size: 2em;
+        }
+        p{
+            font-size: 1.5em;
+        }
+        ul{
+            font-size: 1.5em;
+        }
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 3%;
+        border-top: 2px solid black;
+        padding-bottom: 3em;
+        div{
+            display: flex;
+            justify-content: left;
+        }
+        h3{
+            font-size: 1.5em;
+        }
+        a{
+            font-size: 1.5em;
+        }
+        p{
+            padding-top: 1.25em;
+        }
+    }
+    #left-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 5%;
+    }
+    #right-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 5%;
+    }
+}
+/*Phone screens*/
+@media screen and (max-width: 599px) {
+    header nav{
+        padding: 0.65em;
+        padding-top: 0.8em;
+        gap: .2em;
+        a{
+            font-size: .75em;
+        }
+    }
+    .main-page, .works, .experience{
+        display: flex;
+        margin: 1.5em;
+        flex-direction: column;
+        h1{
+            font-size: 2em
+        }
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 0;
+        border-top: 2px solid black;
+        padding: 1em;
+        div{
+            display: flex;
+            justify-content: left;
+        }
+        h3{
+            font-size: 1em;
+        }
+        a{
+            font-size: 1em;
+        }
+        
+    }
+    #left-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 5%;
+    }
+    #right-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 5%;
+    }
+}
